@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block main %}
+
+<h1>Monster Shooter High Scores</h1>
+<table class="table">
+    <thead>
+        <tr scope="row">
+            <th scope="col">Score</th>
+            <th scope="col">Date</th>
+            <th scope="col">ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for score in scores %}
+        <tr scope="row">
+            <td>{{ score["score"] }}</td>
+            <td>{{ score["date"] }}</td>
+            <td>{{ score["id"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
